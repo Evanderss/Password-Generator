@@ -1,9 +1,12 @@
+{% extends 'generator/layout.html' %}
+{% block content %}
 <form action="password">
 
     <h1>Password Generator </h1>
 
     <label for="length">Select the length of your password</label>
     <select name="length" id="length">
+        <option value="5">5 characters</option>
         <option value="6">6 characters</option>
         <option value="7">7 characters</option>
         <option value="8">8 characters</option>
@@ -13,10 +16,17 @@
         <option value="12">12 characters</option>
         <option value="13">13 characters</option>
         <option value="14">14 characters</option>
+        <option value="15">15 characters</option>
     </select>
     
     <label for="uppercase">Uppercase</label>
     <input type="checkbox" name="uppercase" id="uppercase">
 
+    <label for="special">Special characters</label>
+    <input type="checkbox" name="special" id="special">
+    
+    <label for="numbers">Numbers</label>
+    <input type="checkbox" name="numbers" id="numbers">
     <button>Generate Password</button>
 </form>
+{% endblock content %}
